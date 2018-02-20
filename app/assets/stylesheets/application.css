@@ -453,4 +453,8 @@ template {
      	font-weight: 100;
      	line-height: 1.5;
      }
+     .heading a {
+     	text-decoration: none;
+     	color: #397CAC;
+     }
  

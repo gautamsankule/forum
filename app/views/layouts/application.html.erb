@@ -12,9 +12,14 @@
 
   <body>
   <header id="logo" class="main_header" class="clearfix" class="wrapper">
-  <p class="heading"> Rails Forum</p>
+  <p class="heading"><%= link_to "Rails Forum", root_path %></p>
   <div id="buttons">
-   <%=link_to "New Post", new_post_path %>   
+  <% if user_signed_in? %>
+   <%=link_to "New Post", new_post_path %>
+   <% else %>
+        <%=link_to "Sign Up", new_user_registration_path %>
+        <%=link_to "Sign In", new_user_session_path %> 
+        <% end %> 
   </div>
   
     

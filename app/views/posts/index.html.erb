@@ -1,5 +1,5 @@
 <div id = "post">
-<!--<%= @posts.each do |post| %> -->
+<% @posts.each do |post| %>
 <div class="post">
 <h2 class="title"><%= link_to post.title, post %>  </h2>
  <p class="date">
@@ -9,6 +9,6 @@
  <%= post.user.email %>  
  </p> 
  </div>
- <!-- <% end %> -->
+  <% end %>
  </div>
 
