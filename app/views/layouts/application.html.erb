@@ -3,16 +3,28 @@
   <head>
     <title>Forum</title>
     <%= csrf_meta_tags %>
-
+      
+      <link href="https://fonts.googleapis.com/css?family=Lato|Roboto:700" rel="stylesheet"> 
+    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-
+  <header id="logo" class="main_header" class="clearfix" class="wrapper">
+  <p class="heading"> Rails Forum</p>
+  <div id="buttons">
+   <%=link_to "New Post", new_post_path %>   
+  </div>
+  
+    
+  </header>
+   <div class="wrapper">
    <p class="notice"><%= notice %></p>
    <p class="alert"><%= alert %></p>
-
+     </div>
+   <div class="wrapper">  
     <%= yield %>
+    </div>
   </body>
 </html>
